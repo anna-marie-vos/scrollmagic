@@ -1,0 +1,12 @@
+Background img{
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+}
+Box img{
+  top: 10%;
+  height: 5%;
+  left: 50%;
+  position: absolute;
+  z-index: 1;
+}
