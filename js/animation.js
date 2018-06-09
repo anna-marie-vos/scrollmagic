@@ -1,11 +1,18 @@
 
 $(document).ready(function () {
-  const controller = new ScrollMagic.Controller();
-  const scene = new ScrollMagic.Scene({triggerElement: "#trigger1", duration: 300})
-    .setPin("#pin1")
-    .addIndicators({name: "1 (duration: 300)"}) // add indicators (requires plugin)
-    .addTo(controller);
+  const controller = new ScrollMagic.Controller()
+  // const scene = new ScrollMagic.Scene({
+  //   triggerElement: "#trigger1"
+  // })
+  //   .setTween("#animate1", 0.5, {backgroundColor: "green", scale: 2.5}) // trigger a TweenMax.to tween
+  //   .addIndicators({name: "1 (duration: 0)"}) // add indicators (requires plugin)
+  //   .addTo(controller)
 
+    // new ScrollMagic.Scene({triggerElement: "#trigger2", duration: 300})
+    // // animate color and top border in relation to scroll position
+    // .setTween("#animate2", {borderTop: "30px solid white", backgroundColor: "blue", scale: 0.7}) // the tween durtion can be omitted and defaults to 1
+    // .addIndicators({name: "2 (duration: 300)"}) // add indicators (requires plugin)
+    // .addTo(controller);
   // const boxTimeline = new TimelineMax()
   // boxTimeline.to('#box', 6, {x: -100, y: 600})
   //   .to('#box', 6, {scale: 8}, '-=6')
