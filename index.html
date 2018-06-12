@@ -13,43 +13,32 @@
     <!-- <link rel="stylesheet" href="assets/Skeleton-2.0.4/css/normalize.css"> -->
     <!-- <link rel="stylesheet" href="assets/Skeleton-2.0.4/css/skeleton.css"> -->
     <!-- jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!-- js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
     <script src="js/animation.js"></script>
-
   </head>
-  <!-- <div id="trigger1" class="spacer s0"></div>
-  <Box>
-  <img src="assets/images/pou.svg" id="box"/>
-</Box>
-<Background>
-<img src="assets/images/pathBackground.svg"/>
-</Background> -->
 
   <body>
-    <div class="scrollContent">
-        <section class="demo">
-          <div class="spacer s2"></div>
-          <div id="trigger1" class="spacer s0"></div>
-          <Box>
-            <img src="assets/images/pou.svg" id="animate1"/>
-          </Box>
-          <div class="spacer s2"></div>
-        </section>
-        <section class="demo">
-          <div class="spacer s1"></div>
-          <div id="trigger2" class="spacer s1"></div>
-          <div class="spacer s0"></div>
-          <Box>
-            <img src="assets/images/pou.svg" id="animate2"/>
-          </Box>
-          <div class="spacer s2"></div>
-        </section>
-        <div class="spacer s_viewport"></div>
+    <container>
+      <div id="start"/>
+      <Box>
+        <img src="assets/images/pou.svg" id="box"/>
+      </Box>
+    </container>
+    <section class="star-wars">
+      <div class="crawl">
+        <div class="title">
+          <p>Episode IV</p>
+          <h1>A New Hope</h1>
+        </div>
+        <p>It is a period of civil war. Rebel spaceships, striking from a hidden base, have won their first victory against the evil Galactic Empire.</p>
+        <p>During the battle, Rebel spies managed to steal secret plans to the Empire’s ultimate weapon, the DEATH STAR, an armored space station with enough power to destroy an entire planet.</p>
+        <p>Pursued by the Empire’s sinister agents, Princess Leia races home aboard her starship, custodian of the stolen plans that can save her people and restore freedom to the galaxy…</p>
       </div>
+    </section>
   </body>
-
 </html>

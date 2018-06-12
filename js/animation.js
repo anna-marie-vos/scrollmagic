@@ -1,66 +1,24 @@
 
 $(document).ready(function () {
   const controller = new ScrollMagic.Controller()
-  // const scene = new ScrollMagic.Scene({
-  //   triggerElement: "#trigger1"
-  // })
-  //   .setTween("#animate1", 0.5, {backgroundColor: "green", scale: 2.5}) // trigger a TweenMax.to tween
-  //   .addIndicators({name: "1 (duration: 0)"}) // add indicators (requires plugin)
-  //   .addTo(controller)
 
-    // new ScrollMagic.Scene({triggerElement: "#trigger2", duration: 300})
-    // // animate color and top border in relation to scroll position
-    // .setTween("#animate2", {borderTop: "30px solid white", backgroundColor: "blue", scale: 0.7}) // the tween durtion can be omitted and defaults to 1
-    // .addIndicators({name: "2 (duration: 300)"}) // add indicators (requires plugin)
-    // .addTo(controller);
-  // const boxTimeline = new TimelineMax()
-  // boxTimeline.to('#box', 6, {x: -100, y: 600})
-  //   .to('#box', 6, {scale: 8}, '-=6')
+  const boxTimeline = new TimelineMax()
+  boxTimeline.to('#box', 1,{scale: 3})
+
+  const scene = new ScrollMagic.Scene({
+    triggerElement: "#start",
+    triggerHook: 0.1
+  })
+  .setPin('#box') //this is the element that will be pinned
+  .setTween(boxTimeline)
+  .addIndicators({
+    name: 'move thing',
+    colorTrigger: 'black',
+    indent: 100,
+    colorStart: 'red',
+    colorEnd: 'red'
+  })
+  .addTo(controller)
+
 
 })
-
-// <div class="scrollContent">
-// 	<section id="titlechart">
-// 		<script>
-// 			// init controller
-// 			var controller = new ScrollMagic.Controller();
-// 		</script>
-// 	</section>
-// 	<section class="demo">
-// 		<div class="spacer s2"></div>
-// 		<div id="trigger1" class="spacer s0"></div>
-// 		<div id="pin1" class="box2 blue">
-// 			<p>Stay where you are (at least for a while).</p>
-// 			<a href="#" class="viewsource">view source</a>
-// 		</div>
-// 		<div class="spacer s2"></div>
-// 		<script>
-// 			$(function () { // wait for document ready
-// 				// build scene
-// 				var scene = new ScrollMagic.Scene({triggerElement: "#trigger1", duration: 300})
-// 								.setPin("#pin1")
-// 								.addIndicators({name: "1 (duration: 300)"}) // add indicators (requires plugin)
-// 								.addTo(controller);
-// 			});
-// 		</script>
-// 	</section>
-// 	<section class="demo">
-// 		<div class="spacer s2"></div>
-// 		<div id="trigger2" class="spacer s0"></div>
-// 		<div id="pin2" class="box2 blue">
-// 			<p>Take me with you!</p>
-// 			<a href="#" class="viewsource">view source</a>
-// 		</div>
-// 		<div class="spacer s2"></div>
-// 		<script>
-// 			$(function () { // wait for document ready
-// 				// build scene
-// 				var scene = new ScrollMagic.Scene({triggerElement: "#pin2"})
-// 								.setPin("#pin2")
-// 								.addIndicators({name: "2 (duration: 0)"}) // add indicators (requires plugin)
-// 								.addTo(controller);
-// 			});
-// 		</script>
-// 	</section>
-// 	<div class="spacer s_viewport"></div>
-// </div>
